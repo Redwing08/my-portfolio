@@ -1,0 +1,258 @@
+/* Homepage.css */
+
+/* Reset + Base font setup */
+html, body {
+
+  height: 100%;                 /* Make the page take full height */
+  margin: 0;                    /* Remove browser default margin */
+  padding: 0;                   /* Remove browser default padding */
+  font-family: 'Sen', sans-serif; /* Use Google 'Sen' font for text */
+  /* scroll-behavior: smooth;   Enable smooth scrolling (currently disabled) */
+}
+
+/* ================================
+   SECTION STYLING
+   ================================ */
+.section {
+  width: 100%; /* Make sure section takes full width */
+  min-height: 100vh; /* Fill screen height */
+  display: flex;
+  align-items: center;
+  text-align: left;             /* Default text alignment = left */
+  padding: 0 5%;                /* Add left/right spacing */
+}
+
+.home .row {
+  margin: 0; /* Remove Bootstrap row side margins */
+}
+
+.home .col {
+  padding: 0; /* Remove padding inside column */
+}
+
+
+
+
+/* Headings inside sections */
+.section h1 {
+  align-items: center;          /* (No effect here, works on flex containers) */
+  text-align: center;           /* Center the text horizontally */
+  font-size: 2.5rem;            /* Large font size */
+  margin: 0;                    /* Remove spacing around */
+  color: white;                 /* White text */
+  font-weight: bold;            /* Bold font */
+}
+
+.section h3 {
+  align-items: center;          /* Same as h1 (has no effect here) */
+  text-align: center;           /* Centered text */
+  font-size: 2.5rem;            /* Large font size */
+  margin: 0;                    /* No extra margin */
+  color: white;                 /* White text */
+  /* font-weight: semi-;        Invalid, better to use 600/700 */
+}
+
+/* ================================
+   DIFFERENT BACKGROUNDS PER SECTION
+   ================================ */
+.home {
+  padding-top: 80px; 
+  background-color: #0F0A0A;     /* Dark background for home */
+}
+
+.achievement {
+  background-color: #0F0A0A;     /* Light sky blue */
+}
+
+.project {
+  background-color: #0F0A0A;     /* Periwinkle blue */
+}
+
+.about {
+  background-color: #0F0A0A;     /* Light lavender */
+}
+
+.contact {
+  background-color: #0F0A0A;     /* Same light blue */
+}
+
+/* Prevent line wrapping when applied */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* ================================
+   LEFT CONTENT (NAME, INTRO, TEXT)
+   ================================ */
+.DisplayName {
+  display: flex;
+  color: #ff0303;
+  font-size: clamp(6rem, 5vw, 3rem);
+  font-weight: bold;
+  white-space: normal;  /* text wraps naturally */
+}
+
+/* Force single line only on larger screens */
+@media (min-width: 992px) {   /* lg breakpoint */
+  .DisplayName {
+    white-space: nowrap;      /* keep inline in desktops */
+  }
+
+  .tagline {
+    white-space: nowrap;      /* keep inline in desktops */
+      font-size: 1.5rem;            /* Same size as paragraph */
+  font-weight: 300;  
+  }
+}
+.pgraph {
+  
+  color: white;                 /* White text */
+  font-size: 1.5rem;            /* Medium-large font */
+  margin-bottom: 0.5rem;        /* Small spacing below */
+}
+
+/* .tagline {
+  color: white;                 /* White text */
+  /* font-size: 1.5rem;            Same size as paragraph */
+  /* font-weight: 600;             Semi-bold */
+/* } */ */
+
+.about-text {
+  color: white;                 /* White text */
+  font-size: 1rem;              /* Normal body text */
+  margin: 15px 0 25px;          /* Top + bottom spacing */
+  max-width: 450px;             /* Limit width for readability */
+}
+
+.myself{
+
+  color: white;                 /* White text */
+  font-size: 1rem;              /* Normal body text */
+  margin: 15px  25px;          /* Top + bottom spacing */
+  max-width: 450px;             /* Limit width for readability */
+
+}
+
+/* ================================
+   RESUME BUTTON (CALL TO ACTION)
+   ================================ */
+.resume-btn {
+  display: flex;                 /* Use flexbox for centering */
+  justify-content: center;       /* Center text horizontally */
+  align-items: center;           /* Center text vertically */
+  text-decoration: none;         /* Remove underline */
+  background: #ff0303;           /* Red background */
+  border: none;                  /* Remove border */
+  color: white;                  /* White text */
+  font-size: 1rem;               /* Readable font size */
+  font-weight: bold;             /* Bold text */
+  padding: 12px 25px;            /* Inner spacing */
+  border-radius: 30px;           /* Rounded pill look */
+  transition: background 0.3s, transform 0.2s; /* Smooth hover */
+  max-width: 260px;              /* Prevent too large button */
+  cursor: pointer;               /* Pointer on hover */
+  margin: 0 auto;                /* Center horizontally */
+}
+.resume-btn:hover {
+  background: #cc0202;          /* Darker red when hovered */
+}
+
+/* ================================
+   RIGHT SIDE IMAGE (PROFILE PIC)
+   ================================ */
+.photo-wrapper {
+  background: #ff0303;          /* Red circular frame */
+  width: 280px;                 /* Circle width */
+  height: 300px;                /* Circle height */
+  border-radius: 50%;           /* Make it a circle */
+  display: flex;                /* Flex to center child */
+  align-items: center;          /* Vertical centering */
+  justify-content: center;      /* Horizontal centering */
+  margin: auto;                 /* Center inside parent */
+}
+
+.profile-pic {
+  width: 150%;                   /* Image scales inside circle */
+  border-radius: 50%;           /* Image is circular */
+  margin-top: -120px;
+}
+
+.displayAccount{
+  display: flex;
+  gap: 25px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.expertise, .program{
+  margin-top: 20px;
+  display: flex;
+  gap:30px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* ================================
+   BOOTSTRAP CLASSES USED IN HTML
+   ================================ */
+/*
+.row               → Bootstrap flexbox container for horizontal groups of columns
+.align-items-center → Aligns items vertically in the center (flex utility)
+.col-md-6          → 6-column wide on medium+ screens (half width)
+.btn               → Base button style in Bootstrap
+.btn-primary       → Blue button variant in Bootstrap (if used)
+.text-center       → Align text to the center
+*/
+/* Hide image on small screens */
+/* Responsive layout */
+/* Responsive layout */
+/* Responsive layout */
+@media (max-width: 768px) {
+  .photo-wrapper {
+    display: none; /* hide profile image */
+  }
+
+  .left-content {
+    width: 100%;
+    height: 100vh;              /* force fill whole section */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   /* center vertically */
+    margin: 0;                 /* remove unwanted margin */
+    padding: 0 10px;           /* only small side padding */
+    box-sizing: border-box;
+  }
+
+  .DisplayName {
+    text-align: center;  
+    display: flex;
+    justify-content: center;
+    font-size: 3.2rem;
+    margin: 0; /* remove gaps */
+  }
+
+  .pgraph, 
+  .tagline {
+    font-size: 1.2rem;
+    margin: 5px 0; /* tighten spacing */
+  }
+
+  .resume-btn{
+    display: block;
+    margin: 0 auto; /* centers horizontally */
+    text-align: center;
+  }
+  .displayAccount{
+  
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  height: 100%;   
+  }
+}
+
+
