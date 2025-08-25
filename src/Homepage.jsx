@@ -14,8 +14,8 @@ function Homepage() {
       <Navbar />
       
       <section id="home" className="section home">
-<div class="container-fluid"> 
-  <div class="row no-gutters"> 
+<div className="container-fluid"> 
+  <div className="row no-gutters"> 
                     {/* col-12 → full width on small screens
                       col-md-6 → half width on medium+ screens
                       text-start → left align */}
@@ -29,20 +29,20 @@ function Homepage() {
         with strong problem-solving skills and a commitment to continuous learning.
       </p>
       <div className="displayAccount">
-            <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" class="nav-link">
+            <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
             <i className="fa-brands fa-facebook" style={{ color: "white", fontSize: 30 }}></i>
 
            {/* <img src="./src/image/facebook.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
        </a> 
-          <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" class="nav-link">
+          <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
            {/* <img src="./src/image/insta.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
           <i className="fa-brands fa-instagram" style={{ color: "white", fontSize: 33 }}></i>
        </a> 
-       <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" class="nav-link">
+       <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
            <i className="fa-brands fa-tiktok" style={{ color: "white", fontSize: 25 }}></i>
            {/* <img src="./src/image/tiktok.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
        </a> 
-          <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" class="nav-link">
+          <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
           <i className="fa-brands fa-github" style={{ color: "white", fontSize: 30 }}></i>
            {/* <img src="./src/image/git.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
        </a> 
@@ -60,7 +60,7 @@ function Homepage() {
       {/* <button className="resume-btn">Download Resume</button>  */}
     </div>
 
-     <div class="col-12 col-md-6 d-none d-md-block"> 
+     <div className="col-12 col-md-6 d-none d-md-block"> 
          <div className="photo-wrapper">
         <img
           src={profilePic}   // change to your image path
@@ -86,11 +86,11 @@ function Homepage() {
 
       <section id="achievement" className="section achievement">
     
-        <div class="container-fluid"> 
+        <div className="container-fluid"> 
             <div className="row justify-content-center imgDisplay">
             <div className="col-md-12 text-center displayAchievement"> 
          <h3  className="">
-           <i class="fas fa-trophy text-warning"></i>  My Achievements and Certifications <i class="fas fa-certificate text-warning"></i></h3> 
+           <i className="fas fa-trophy text-warning"></i>  My Achievements and Certifications <i className="fas fa-certificate text-warning"></i></h3> 
             </div>
             <div>
             </div>
@@ -98,7 +98,7 @@ function Homepage() {
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top bgdis" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i class="fas fa-award text-warning"></i> Hackathon-Champion</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-award text-warning"></i> Hackathon-Champion</p>
                      <p className="card-text text-center">Likhamon Research Extension Development Innovation</p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ function Homepage() {
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i class="fas fa-graduation-cap text-warning"></i> CUM LAUDE - Batch 2024</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-graduation-cap text-warning"></i> CUM LAUDE - Batch 2024</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ function Homepage() {
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                       <p className="card-text text-center fw-bold"><i class="fas fa-medal text-warning"></i> NCIII -Passer Java Programming</p>
+                       <p className="card-text text-center fw-bold"><i className="fas fa-medal text-warning"></i> NCIII -Passer Java Programming</p>
                      <p className="card-text text-center">Joysis Techvoc</p>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ function Homepage() {
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i  class="fas fa-trophy text-warning"></i> Leadership Award</p>
+                    <p className="card-text text-center fw-bold"><i  className="fas fa-trophy text-warning"></i> Leadership Award</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ function Homepage() {
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i class="fas fa-laptop-code text-primary"></i>Outstanding Student Trainee</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-primary"></i>Outstanding Student Trainee</p>
                      <p className="card-text text-center">Department of Migrant Workers</p>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ function Homepage() {
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i class="fas fa-chalkboard-teacher text-primary"></i>Techno Club President -2023</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-chalkboard-teacher text-primary"></i>Techno Club President -2023</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ function Homepage() {
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i class="fas fa-laptop-code text-primary"></i>Certificate of Commendation</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-primary"></i>Certificate of Commendation</p>
                      <p className="card-text text-center">Department of Migrant Workers</p>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ function Homepage() {
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i class="fas fa-laptop-code text-primary"></i>Introduction to Ethical Hacking </p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-primary"></i>Introduction to Ethical Hacking </p>
                      <p className="card-text text-center">Upskill Up Diliman </p>
                   </div>
                 </div>
