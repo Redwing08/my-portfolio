@@ -142,7 +142,16 @@ function Homepage() {
                   </div>
                 </div>
               </div>
-      
+              <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i className="fas fa-graduation-cap text-warning"></i> Highest GWA / Valedictorian - Batch 2024</p>
+                     <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
+                  </div>
+                </div>
+              </div>
+                    
                <div className="col-md-4 d-flex justify-content-center mb-4">
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                   <img src={profilePic} className="card-img-top" alt="..."/>
