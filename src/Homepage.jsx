@@ -1,14 +1,44 @@
 import React from "react";
 import Navbar from "./Navbar";
 //Image & pdf
-// import pdfResume from "./public/update_resume.pdf"
 import profilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+//This is for the email sender first  npm install emailjs-com
+import emailjs from "emailjs-com";
+
 
 
 function Homepage() {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+         "service_hcgb2pj",      // replace with your EmailJS service ID
+        "template_yyy",     // replace with your EmailJS template ID
+        e.target,               // the form element
+        "TrL2go7gORASqo75F"       // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Message Sent Successfully")
+          e.target.reset();
+        },
+        (error) =>{
+          alert("Failed to Send Message");
+          console.log(error.text)
+        }
+      );
+      };
+
+  
+
+
+
+
+
+
+
   return (
     <div>
       <Navbar />
@@ -179,11 +209,53 @@ function Homepage() {
         <h1>About Me</h1>
       </section>
 
-      <section id="contact" className="section contact">
-        <h1>Contact Me</h1>
-      </section>
+<section id="contact" className="section contact">
+<div className="container my-5">
+  <div className="card shadow-lg p-4 mx-auto" style={{ maxWidth: "700px"}}>
+    <div className="row g-4 align-items-center justify-content-center">
+
+      {/* Left Side - Form */}
+      <div className="col-md-12 d-flex flex-column justify-content-center">
+      {/* <div className="col-md-6 d-flex flex-column justify-content-center"> */}
+        <h4 className="mb-3 text-center">Contact Me</h4>
+        <form onSubmit={sendEmail}>
+          <div className="mb-3">
+            <label className="form-label">Full Name</label>
+            <input type="text"  name="name" className="form-control form-control-sm" placeholder="Enter Full Name"/>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input type="email" name="email" className="form-control form-control-sm" placeholder="Enter Email"/>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Message</label>
+            <textarea name="message" className="form-control form-control-sm" rows="3" placeholder="Type your message"></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+
+      {/* Right Side - Image */}
+      {/* <div className="col-md-4 d-none d-md-flex align-items-center justify-content-center">
+        <img 
+          src={profilePic} 
+          className="img-fluid rounded" 
+          alt="Preview" 
+          style={{ maxWidth: "500px" }}
+        />
+      </div> */}
+
+    </div>
+  </div>
+</div>
+
+
+</section>
+
     </div>
   );
 }
+
+
 
 export default Homepage;
