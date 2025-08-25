@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
+//Image 
+import profilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -43,10 +45,7 @@ function Homepage() {
           <i className="fa-brands fa-github" style={{ color: "white", fontSize: 30 }}></i>
            {/* <img src="./src/image/git.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
        </a> 
-       <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" class="nav-link">
-          <i className="fa-brands fa-indeed" style={{ color: "white", fontSize: 30 }}></i>
-           {/* <img src="./src/image/git.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
-       </a>    
+        
 
       </div>
        <a className="resume-btn" href="./src/image/update_resume.pdf"  download="Steve_Calvin_Resume.pdf">
@@ -58,7 +57,7 @@ function Homepage() {
      <div class="col-12 col-md-6 d-none d-md-block"> 
          <div className="photo-wrapper">
         <img
-          src="./src/image/steve.png"   // change to your image path
+          src={profilePic}   // change to your image path
           alt="Steve Calvin"
           className="profile-pic"
         />
