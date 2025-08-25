@@ -240,7 +240,7 @@ function Homepage() {
             <label className="form-label">Message</label>
             <textarea name="message" className="form-control form-control-sm" rows="3" placeholder="Type your message"></textarea>
           </div>
-          <button type="submit" className="btn btn-primary w-100">Submit</button>
+          <button type="submit" className="btn submitbtn w-100 ">Submit</button>
         </form>
       </div>
 

@@ -216,6 +216,21 @@ html, body {
 .card-body{
   background-color: white;
 }
+.submitbtn{
+  background-color:#ff0303 ;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+
+}
+.submitbtn:hover{
+    background-color:#cc0202 ;
+    color: white;
+}
 
 
 /* ================================
