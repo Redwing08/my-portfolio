@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 //Image & pdf
-import pdfResume from "./public/updated_resume.pdf"
+import pdfResume from "./public/update_resume.pdf"
 import profilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
