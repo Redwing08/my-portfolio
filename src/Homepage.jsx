@@ -49,7 +49,7 @@ function Homepage() {
         
 
       </div>
-       <a className="resume-btn" href="/update_resume.pdf"  download="Steve_Calvin_Resume.pdf">
+       <a className="resume-btn" href={`${import.meta.env.BASE_URL}update_resume.pdf`}  download="Steve_Calvin_Resume.pdf">
        Download Resume
        </a>
       {/* <button className="resume-btn">Download Resume</button>  */}
@@ -80,7 +80,7 @@ function Homepage() {
       </section>
 
       <section id="achievement" className="section achievement">
-        <h1>My Achievements</h1>
+        
       </section>
 
       <section id="project" className="section project">
