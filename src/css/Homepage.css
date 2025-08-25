@@ -62,6 +62,7 @@ html, body {
 
 .achievement {
   background-color: #0F0A0A;     /* Light sky blue */
+
 }
 
 .project {
@@ -133,6 +134,9 @@ html, body {
 
 }
 
+
+
+
 /* ================================
    RESUME BUTTON (CALL TO ACTION)
    ================================ */
@@ -193,6 +197,29 @@ html, body {
   align-items: center;
 }
 
+
+/* ACHIEVEMENT */
+
+.displayAchievement{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgDisplay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgBG {
+  border: 4px solid #ffffff;
+  background-color: #ff0303;
+}
+.card-body{
+  background-color: white;
+}
 
 
 /* ================================

@@ -49,9 +49,14 @@ function Homepage() {
         
 
       </div>
-       <a className="resume-btn" href={`${import.meta.env.BASE_URL}update_resume.pdf`}  download="Steve_Calvin_Resume.pdf">
-       Download Resume
-       </a>
+     <a 
+  className="resume-btn" 
+  href={`${import.meta.env.BASE_URL}updated_resume.pdf`}  
+  download="Steve_Calvin_Resume.pdf"
+>
+  Download Resume
+</a>
+
       {/* <button className="resume-btn">Download Resume</button>  */}
     </div>
 
@@ -80,7 +85,90 @@ function Homepage() {
       </section>
 
       <section id="achievement" className="section achievement">
-        
+    
+        <div class="container-fluid"> 
+            <div className="row justify-content-center imgDisplay">
+            <div className="col-md-12 text-center displayAchievement"> 
+         <h3  className="">
+           <i class="fas fa-trophy text-warning"></i>  My Achievements and Certifications <i class="fas fa-certificate text-warning"></i></h3> 
+            </div>
+            <div>
+            </div>
+              <div className="col-md-4 d-flex justify-content-center mb-4">
+                <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top bgdis" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i class="fas fa-award text-warning"></i> Hackathon-Champion</p>
+                     <p className="card-text text-center">Likhamon Research Extension Development Innovation</p>
+                  </div>
+                </div>
+              </div>
+               <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i class="fas fa-graduation-cap text-warning"></i> CUM LAUDE - Batch 2024</p>
+                     <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
+                  </div>
+                </div>
+              </div>
+      
+               <div className="col-md-4 d-flex justify-content-center mb-4">
+                <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                       <p className="card-text text-center fw-bold"><i class="fas fa-medal text-warning"></i> NCIII -Passer Java Programming</p>
+                     <p className="card-text text-center">Joysis Techvoc</p>
+                  </div>
+                </div>
+              </div>
+                       <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i  class="fas fa-trophy text-warning"></i> Leadership Award</p>
+                     <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
+                  </div>
+                </div>
+              </div>  
+              <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i class="fas fa-laptop-code text-primary"></i>Outstanding Student Trainee</p>
+                     <p className="card-text text-center">Department of Migrant Workers</p>
+                  </div>
+                </div>
+              </div> 
+              <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i class="fas fa-chalkboard-teacher text-primary"></i>Techno Club President -2023</p>
+                     <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
+                  </div>
+                </div>
+              </div> 
+                  <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i class="fas fa-laptop-code text-primary"></i>Certificate of Commendation</p>
+                     <p className="card-text text-center">Department of Migrant Workers</p>
+                  </div>
+                </div>
+              </div> 
+                  <div className="col-md-4 d-flex justify-content-center mb-4">
+                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text text-center fw-bold"><i class="fas fa-laptop-code text-primary"></i>Introduction to Ethical Hacking </p>
+                     <p className="card-text text-center">Upskill Up Diliman </p>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
       </section>
 
       <section id="project" className="section project">
