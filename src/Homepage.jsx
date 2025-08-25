@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 //Image & pdf
-import pdfResume from "./public/update_resume.pdf"
+// import pdfResume from "./public/update_resume.pdf"
 import profilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -49,7 +49,7 @@ function Homepage() {
         
 
       </div>
-       <a className="resume-btn" href={pdfResume}  download="Steve_Calvin_Resume.pdf">
+       <a className="resume-btn" href="/update_resume.pdf"  download="Steve_Calvin_Resume.pdf">
        Download Resume
        </a>
       {/* <button className="resume-btn">Download Resume</button>  */}
