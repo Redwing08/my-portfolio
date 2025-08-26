@@ -1,11 +1,28 @@
 import React from "react";
 import Navbar from "./Navbar";
 //Image & pdf
-import profilePic from "./assets/steve.png";
+import ProfilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 //This is for the email sender first  npm install emailjs-com
 import emailjs from "emailjs-com";
-
+import ReactLogo from "./assets/react.svg"
+import JavaLogo from "./assets/java.svg"
+import PythonLogo from "./assets/python.svg"
+import CLogo from "./assets/C.svg"
+import CppLogo from "./assets/c++.svg"
+import SpringLogo from "./assets/springboot.svg"
+import MySqlLogo from "./assets/mysql.svg"
+import MsSqlLogo from "./assets/mssql.svg"
+import PhpLogo from "./assets/php.svg"
+import HtmlLogo from "./assets/html.svg"
+import JSLogo from "./assets/js.svg"
+import CssLogo from "./assets/css.svg"
+import AndroidLogo from "./assets/androidstudio.svg"
+import NodeJSLogo from "./assets/nodejs.svg"
+import PostmanLogo from "./assets/postman.svg"
+import GitLogo from "./assets/git.svg"
+import BlenderLogo from "./assets/blender.svg"
+import FigmaLogo from "./assets/figma.svg"
 
 
 function Homepage() {
@@ -58,57 +75,106 @@ function Homepage() {
         (Python, Java, C, SQL, PHP), and 3D modeling. Proficient in Microsoft Office
         with strong problem-solving skills and a commitment to continuous learning.
       </p>
-      <div className="displayAccount">
-            <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
-            <i className="fa-brands fa-facebook" style={{ color: "white", fontSize: 30 }}></i>
+    
+<div className="d-flex flex-column flex-md-row ms-4">
+  {/* Social Icons */}
+  <div className="displayAccount d-flex mb-3 mb-md-0">
+    <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
+      <i className="fa-brands fa-facebook" style={{ color: "white", fontSize: 30 }}></i>
+    </a>
+    <a href="https://www.instagram.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
+      <i className="fa-brands fa-instagram" style={{ color: "white", fontSize: 33 }}></i>
+    </a>
+    <a href="https://www.tiktok.com" target="_blank" className="nav-link">
+      <i className="fa-brands fa-tiktok" style={{ color: "white", fontSize: 25 }}></i>
+    </a>
+    <a href="https://github.com" target="_blank" className="nav-link">
+      <i className="fa-brands fa-github" style={{ color: "white", fontSize: 30 }}></i>
+    </a>
+  </div>
 
-           {/* <img src="./src/image/facebook.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
-       </a> 
-          <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
-           {/* <img src="./src/image/insta.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
-          <i className="fa-brands fa-instagram" style={{ color: "white", fontSize: 33 }}></i>
-       </a> 
-       <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
-           <i className="fa-brands fa-tiktok" style={{ color: "white", fontSize: 25 }}></i>
-           {/* <img src="./src/image/tiktok.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
-       </a> 
-          <a href="https://www.facebook.com/stevecalvinromano.barrera" target="_blank" className="nav-link">
-          <i className="fa-brands fa-github" style={{ color: "white", fontSize: 30 }}></i>
-           {/* <img src="./src/image/git.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/> */}
-       </a> 
-        
-
-      </div>
-     <a 
-  className="resume-btn" 
-  href={`${import.meta.env.BASE_URL}updated_resume.pdf`}  
-  download="Steve_Calvin_Resume.pdf"
->
-  Download Resume
-</a>
+  {/* Resume Button */}
+  <a 
+    className="resume-btn ms-md-3"
+    href={`${import.meta.env.BASE_URL}updated_resume.pdf`}  
+    download="Steve_Calvin_Resume.pdf"
+  >
+    Download CV
+  </a>
+</div>
 
       {/* <button className="resume-btn">Download Resume</button>  */}
     </div>
-
-     <div className="col-12 col-md-6 d-none d-md-block"> 
+                      
+     <div className="col-12 col-md-6 "> 
          <div className="photo-wrapper">
         <img
-          src={profilePic}   // change to your image path
+          src={ProfilePic}   // change to your image path
           alt="Steve Calvin"
           className="profile-pic"
         />
     
       </div>      
-          <div className="expertise">
-            <p className="pgraph" >Set of Expertise</p>          
-        </div>   
-             <div className="program">
-                 {/* <img src="./src/assets/react.svg" alt="Facebook" width="40" height="40" class="d-inline-block align-text-top"/>              */}
-               {/* <i class="fa-brands fa-facebook" style="color: #ffffff;"></i> */}
-                 {/* <img src="./src/image/php.svg" alt="Facebook" width="70" height="40" class="d-inline-block align-text-top"/>      
-                  <img src="./src/image/java.svg" alt="Facebook" width="100" height="100" class="d-inline-block align-text-top"/>        */}
-
+          <div className="program ">
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={ReactLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>      
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={JavaLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>    
+                 <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={PythonLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>    
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={CLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={CppLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>    
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={SpringLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>
             </div>     
+      <div className="program ">
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={NodeJSLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={PhpLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>      
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={MySqlLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>    
+                 <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={MsSqlLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={AndroidLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>    
+            </div> 
+          <div className="program ">
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={HtmlLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>      
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={JSLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
+               <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={GitLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>    
+            </div> 
+               <div className="program ">
+                <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={FigmaLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
+              <div className="card h-10 imgBG d-flex  justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={BlenderLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div>      
+      
+            </div>
     </div>
              
     
@@ -126,7 +192,7 @@ function Homepage() {
             </div>
               <div className="col-md-4 d-flex justify-content-center mb-4">
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top bgdis" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-award text-warning"></i> Hackathon-Champion</p>
                      <p className="card-text text-center">Likhamon Research Extension Development Innovation</p>
@@ -135,7 +201,7 @@ function Homepage() {
               </div>
                <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-graduation-cap text-warning"></i> CUM LAUDE - Batch 2024</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
@@ -144,7 +210,7 @@ function Homepage() {
               </div>
               <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-graduation-cap text-warning"></i> Highest GWA / Valedictorian - Batch 2024</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
@@ -154,7 +220,7 @@ function Homepage() {
                     
                <div className="col-md-4 d-flex justify-content-center mb-4">
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
                        <p className="card-text text-center fw-bold"><i className="fas fa-medal text-warning"></i> NCIII -Passer Java Programming</p>
                      <p className="card-text text-center">Joysis Techvoc</p>
@@ -163,7 +229,7 @@ function Homepage() {
               </div>
                        <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i  className="fas fa-trophy text-warning"></i> Leadership Award</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
@@ -172,36 +238,36 @@ function Homepage() {
               </div>  
               <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-primary"></i>Outstanding Student Trainee</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-warning"></i>Outstanding Student Trainee</p>
                      <p className="card-text text-center">Department of Migrant Workers</p>
                   </div>
                 </div>
               </div> 
               <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i className="fas fa-chalkboard-teacher text-primary"></i>Techno Club President -2023</p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-chalkboard-teacher text-warning"></i>Techno Club President -2022</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
                   </div>
                 </div>
               </div> 
                   <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-primary"></i>Certificate of Commendation</p>
+                    <p className="card-text text-center fw-bold "><i className="fas fa-laptop-code text-warning"></i>Certificate of Commendation</p>
                      <p className="card-text text-center">Department of Migrant Workers</p>
                   </div>
                 </div>
               </div> 
                   <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={profilePic} className="card-img-top" alt="..."/>
+                  <img src={ProfilePic} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-primary"></i>Introduction to Ethical Hacking </p>
+                    <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-warning"></i>Introduction to Ethical Hacking </p>
                      <p className="card-text text-center">Upskill Up Diliman </p>
                   </div>
                 </div>

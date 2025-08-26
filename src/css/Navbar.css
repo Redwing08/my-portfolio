@@ -35,13 +35,14 @@ li{
 
 .nav-links li a:hover{
   /* background-color: #dc2626; Tailwind red-600 */
-  color: #ff0303;
+  color: #d20101;
  padding: 15px 30px; 
   border-radius: 16px;
   transition:all 0.3s;
 }
 .nav-links li a.active {
-  background-color: #dc2626; /* red background */
+
+  background-color: #d20101; /* red background */
   color: #fff; /* text white */
   padding: 10px 30px; /* bigger size */
   border-radius: 16px;

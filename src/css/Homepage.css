@@ -87,7 +87,7 @@ html, body {
    ================================ */
 .DisplayName {
   display: flex;
-  color: #ff0303;
+  color: #d20101;
   font-size: clamp(6rem, 5vw, 3rem);
   font-weight: bold;
   white-space: normal;  /* text wraps naturally */
@@ -139,9 +139,9 @@ html, body {
 .resume-btn {
   display: flex;                 /* Use flexbox for centering */
   justify-content: center;       /* Center text horizontally */
-  align-items: center;           /* Center text vertically */
+  align-items: center;           /*Center text vertically */
   text-decoration: none;         /* Remove underline */
-  background: #ff0303;           /* Red background */
+  background: #d20101;           /* Red background */
   border: none;                  /* Remove border */
   color: white;                  /* White text */
   font-size: 1rem;               /* Readable font size */
@@ -151,17 +151,17 @@ html, body {
   transition: background 0.3s, transform 0.2s; /* Smooth hover */
   max-width: 260px;              /* Prevent too large button */
   cursor: pointer;               /* Pointer on hover */
-  margin: 0 auto;                /* Center horizontally */
+  /* margin: 0 auto;                Center horizontally */
 }
 .resume-btn:hover {
-  background: #cc0202;          /* Darker red when hovered */
+  background: #810202;          /* Darker red when hovered */
 }
 
 /* ================================
    RIGHT SIDE IMAGE (PROFILE PIC)
    ================================ */
 .photo-wrapper {
-  background: #ff0303;          /* Red circular frame */
+  background: #d20101;          /* Red circular frame */
   width: 280px;                 /* Circle width */
   height: 300px;                /* Circle height */
   border-radius: 50%;           /* Make it a circle */
@@ -175,6 +175,7 @@ html, body {
   width: 150%;                   /* Image scales inside circle */
   border-radius: 50%;           /* Image is circular */
   margin-top: -120px;
+  margin-left: 20px;
 }
 
 .displayAccount{
@@ -187,8 +188,8 @@ html, body {
 
 .expertise, .program{
   margin-top: 20px;
+  gap:20px;
   display: flex;
-  gap:30px;
   justify-content: center;
   align-items: center;
 }
@@ -210,14 +211,17 @@ html, body {
 }
 
 .imgBG {
-  border: 4px solid #ffffff;
-  background-color: #ff0303;
+  border: 2px solid #d20101;
+  background-color: #0F0A0A;
 }
 .card-body{
-  background-color: white;
+  background-color: #d20101;
+}
+.card-text {
+  color:white;
 }
 .submitbtn{
-  background-color:#ff0303 ;
+  background-color:#d20101 ;
   padding: 15px;
   border-radius: 15px;
   color: white;
@@ -228,7 +232,7 @@ html, body {
 
 }
 .submitbtn:hover{
-    background-color:#cc0202 ;
+    background-color:#810202 ;
     color: white;
 }
 
