@@ -171,9 +171,11 @@ function Homepage() {
                   <img src={BlenderLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
               </div>  
               <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
-                  <img src={PostmanLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                  <img src={JSLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
               </div>   
-      
+              <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                  <img src={GitLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+              </div> 
           </div>
         </div>
       </div>

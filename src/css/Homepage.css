@@ -175,7 +175,7 @@ html, body {
 
   width: 150%;                   /* Image scales inside circle */
   border-radius: 50%;           /* Image is circular */
-  margin-top: -100px;
+  margin-top: -110px;
 }
 
 .displayAccount{
