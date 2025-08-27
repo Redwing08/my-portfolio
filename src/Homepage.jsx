@@ -1,4 +1,11 @@
-import React from "react";
+import React , { useEffect, useRef } from "react"; // this is for 3d
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/Addons.js";
+
+
+
+
+
 import Navbar from "./Navbar";
 //Image & pdf
 import ProfilePic from "./assets/steve.png";
@@ -90,16 +97,23 @@ function Homepage() {
               <a href="https://github.com" target="_blank" className="nav-link">
                 <i className="fa-brands fa-github" style={{ color: "white", fontSize: 30 }}></i>
               </a>
-            </div>
-
-            {/* Resume Button */}
-            <a
-              className="resume-btn ms-md-3"
+              <a
+              className="resume-btn ms-3"
               href={`${import.meta.env.BASE_URL}updated_resume.pdf`}
               download="Steve_Calvin_Resume.pdf"
             >
               Download CV
             </a>
+            </div>
+
+            {/* Resume Button */}
+            {/* <a
+              className="resume-btn ms-md-3"
+              href={`${import.meta.env.BASE_URL}updated_resume.pdf`}
+              download="Steve_Calvin_Resume.pdf"
+            >
+              Download CV
+            </a> */}
           </div>
         </div>
 
@@ -171,11 +185,8 @@ function Homepage() {
                   <img src={BlenderLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
               </div>  
               <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
-                  <img src={JSLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                  <img src={PostmanLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
               </div>   
-              <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
-                  <img src={GitLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
-              </div> 
           </div>
         </div>
       </div>
@@ -282,7 +293,22 @@ function Homepage() {
       </section>
 
       <section id="project" className="section project">
-        <h1>My Projects</h1>
+      <div className="container-fluid">
+        <div className="row no-gutters">
+            <div className="col-12 col-md-6">
+                <div className="circle-display">
+
+                </div>
+            </div>   
+            <div className="col-12 col-md-6">
+
+            </div> 
+
+
+        </div>
+      </div>
+
+
       </section>
 
       <section id="about" className="section about">
