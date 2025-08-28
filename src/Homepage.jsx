@@ -1,11 +1,6 @@
-import React , { useEffect, useRef } from "react"; // this is for 3d
-import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/Addons.js";
-
-
-
-
-
+import React  from "react"; 
+//This is for 3D display
+import ModelViewer from "./ModelViewer";
 import Navbar from "./Navbar";
 //Image & pdf
 import ProfilePic from "./assets/steve.png";
@@ -191,8 +186,7 @@ function Homepage() {
 
 
       <section id="achievement" className="section achievement">
-    
-        <div className="container-fluid"> 
+            <div className="container-fluid"> 
             <div className="row justify-content-center imgDisplay">
             <div className="col-md-12 text-center displayAchievement"> 
          <h3  className="">
@@ -284,20 +278,21 @@ function Homepage() {
               </div> 
             </div>
           </div>
+
+    
       </section>
 
       <section id="project" className="section project">
-      <div className="container-fluid">
+             <div className="container-fluid">
         <div className="row no-gutters">
             <div className="col-12 col-md-6">
                 <div className="circle-display">
-
+                  {/* <ModelViewer/> */}
                 </div>
             </div>   
             <div className="col-12 col-md-6">
 
             </div> 
-
 
         </div>
       </div>

@@ -30,6 +30,71 @@ html, body {
   padding: 0; /* Remove padding inside column */
 }
 
+/* Make container more mobile-friendly */
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ensure columns stack properly on mobile */
+@media (max-width: 768px) {
+  .row.no-gutters {
+    flex-direction: column;
+    align-items: center; /* center content */
+    text-align: center; /* center text on small screens */
+  }
+
+  /* Adjust text size */
+  .DisplayName {
+    font-size: 2.2rem; /* smaller but still visible */
+  }
+
+  .pgraph, 
+  .tagline {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .myself {
+    font-size: 0.9rem;
+    margin: 10px auto; /* center with auto margin */
+    max-width: 90%;    /* fit screen better */
+  }
+
+  /* Resume button */
+  .resume-btn {
+    width: 90%; /* button takes almost full width */
+    margin: 10px auto;
+  }
+
+  /* Icons container */
+  .displayAccount {
+    gap: 15px;
+    flex-wrap: wrap; /* allow wrapping if icons don’t fit */
+  }
+
+  /* Tech stack logos */
+  .program {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .program .card {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .program img {
+    width: 1.8rem;
+  }
+
+  /* Contact form */
+  .contact .card {
+    width: 95%;
+    margin: auto;
+  }
+}
 
 
 
@@ -261,7 +326,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem; /* space between cards */
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .program .card {
@@ -335,9 +400,13 @@ html, body {
   align-items: center;     /* center vertically */
   height: 100%;   
   }
-    .program {
-    justify-content: center; /* center cards on mobile */
-  }
+
 }
+
+
+
+/* Profile picture responsiveness */
+
+
 
 
