@@ -97,23 +97,17 @@ function Homepage() {
               <a href="https://github.com" target="_blank" className="nav-link">
                 <i className="fa-brands fa-github" style={{ color: "white", fontSize: 30 }}></i>
               </a>
-              <a
-              className="resume-btn ms-3"
-              href={`${import.meta.env.BASE_URL}updated_resume.pdf`}
-              download="Steve_Calvin_Resume.pdf"
-            >
-              Download CV
-            </a>
+        
             </div>
 
             {/* Resume Button */}
-            {/* <a
+            <a
               className="resume-btn ms-md-3"
               href={`${import.meta.env.BASE_URL}updated_resume.pdf`}
               download="Steve_Calvin_Resume.pdf"
             >
               Download CV
-            </a> */}
+            </a>
           </div>
         </div>
 

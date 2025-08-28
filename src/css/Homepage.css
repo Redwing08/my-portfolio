@@ -257,11 +257,21 @@ html, body {
 }
 
 
-.program{
+.program {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* space between cards */
+  margin-top: 0.5rem;
+}
+
+.program .card {
+  /* flex: 1 1 3rem; allow shrinking/growing */
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0.75rem;
 }
+
 
 /* ================================
    BOOTSTRAP CLASSES USED IN HTML
@@ -324,6 +334,9 @@ html, body {
   justify-content: center; /* center horizontally */
   align-items: center;     /* center vertically */
   height: 100%;   
+  }
+    .program {
+    justify-content: center; /* center cards on mobile */
   }
 }
 
