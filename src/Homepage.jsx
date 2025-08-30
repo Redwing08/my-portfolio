@@ -1,6 +1,6 @@
 import React  from "react"; 
 //This is for 3D display
-import ModelViewer from "./ModelViewer";
+import ModelViewer from './ModelViewer';
 import Navbar from "./Navbar";
 //Image & pdf
 import ProfilePic from "./assets/steve.png";
@@ -96,13 +96,14 @@ function Homepage() {
             </div>
 
             {/* Resume Button */}
-            <a
-              className="resume-btn ms-md-3"
-              href={`${import.meta.env.BASE_URL}updated_resume.pdf`}
-              download="Steve_Calvin_Resume.pdf"
-            >
-              Download CV
-            </a>
+  <a
+  className="resume-btn ms-md-3"
+  href='update_resume.pdf'
+  download="Steve_Calvin_Resume.pdf"
+>
+  Download CV
+</a>
+
           </div>
         </div>
 
@@ -287,7 +288,7 @@ function Homepage() {
         <div className="row no-gutters">
             <div className="col-12 col-md-6">
                 <div className="circle-display">
-                  {/* <ModelViewer/> */}
+                  <ModelViewer/>
                 </div>
             </div>   
             <div className="col-12 col-md-6">

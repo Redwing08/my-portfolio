@@ -6,6 +6,9 @@ const ModelViewer = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    if (!mountRef.current) return;
+
+    // Scene + Camera
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -13,6 +16,9 @@ const ModelViewer = () => {
       0.1,
       1000
     );
+    camera.position.z = 5;
+
+    // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(
       mountRef.current.clientWidth,
@@ -25,26 +31,29 @@ const ModelViewer = () => {
     light.position.set(2, 2, 5).normalize();
     scene.add(light);
 
-    // ✅ Load GLB from public/
-        const loader = new GLTFLoader();
-        loader.load(
-        new URL("../assets/BALALONG.glb", import.meta.url).href,  // from src/assets
-        (gltf) => {
-            scene.add(gltf.scene);
-            animate();
-        },
-        undefined,
-        (error) => console.error("Error loading model:", error)
-        );
-    camera.position.z = 5;
+    // Load model ✅
+    const loader = new GLTFLoader();
+    loader.load(
+        import.meta.env.BASE_URL + "BALALONG.glb", // put BALALONG.glb inside public/
+      (gltf) => {
+        scene.add(gltf.scene);
+        animate();
+      },
+      undefined,
+      (error) => console.error("Error loading model:", error)
+    );
 
+    // Animate
     const animate = () => {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
     };
 
+    // Cleanup
     return () => {
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountRef.current && renderer.domElement) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
