@@ -3,6 +3,9 @@ import React  from "react";
 import ModelViewer from './ModelViewer';
 import Navbar from "./Navbar";
 //Image & pdf
+import Nosa from './assets/NOSA.png'
+import Dtr from './assets/DTR.png'
+import Payslip from './assets/PAYSLIP.png'
 import ProfilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 //This is for the email sender first  npm install emailjs-com
@@ -285,54 +288,66 @@ function Homepage() {
 
      <section id="project" className="section project">
   <div className="container-fluid ">
-    <div className="row no-gutters ms-5">
+    <div className="row justify-content-center">
       
       {/* Left Side - Large Project Card */}
-      <div className="col-12 col-md-6 d-flex justify-content-center mb-4">
-        <div 
-          className="card h-100 imgBG" 
-          style={{ width: "28rem", height: "32rem" }} // ⬅️ Increased width & height
-        >
+      {/* <div className="col-12 col-md-6 d-flex justify-content-center mb-4"> */}
+        {/* <div 
+          className="card h-100 imgBG"  */}
+          {/* style={{ width: "28rem", height: "32rem" }} // ⬅️ Increased width & height */}
+        {/* > */}
 
-          <ModelViewer/>
+          {/* <ModelViewer/> */}
           {/* <img 
             src={ProfilePic} 
             className="card-img-top bgdis" 
             alt="..." 
             style={{ height: "60%", objectFit: "cover" }} // ⬅️ Made image take up more space and scale nicely
           /> */}
-          <div className="card-body">
-            <p className="card-text text-center fw-bold">
+          {/* <div className="card-body"> */}
+            {/* <p className="card-text text-center fw-bold">
               <i className="fas fa-award text-warning"></i> 
               Digitalization of Traditional Fishing Gear System
-            </p>
-          </div>
-        </div>
-      </div>
+            </p> */}
+          {/* </div> */}
+        {/* </div> */}
+      {/* </div> */}
       
       {/* Right Side - Other Projects */}
-      <div className="col-12 col-md-6">
-        <div className="container-fluid">
+      {/* <div className="col-12 "> */}
+      {/* <div className="col-12 col-md-6"> */}
+        {/* <div className="container-fluid"> */}
+        <div className="container-fluid" style={{ marginTop: "5rem" }}>
+
+            {/* <div className="row justify-content-center imgDisplay">
+            <div className="col-md-12 text-center displayAchievement">  */}
+
+
+
           <div className="row justify-content-center imgDisplay">
             <div className="col-md-12 text-center displayAchievement"> 
-              <h4 className="text-white">Other Projects</h4> 
+              <h3 >My Projects</h3> 
             </div>
 
             {/* Smaller cards */}
-            <div className="col-md-4 d-flex justify-content-center mb-4">
-              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+            <div className="col-md-6 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "25rem" }}>
+                <img src={Dtr} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
-                  <p className="card-text text-center fw-bold">
+                  <h5 className="card-text text-center fw-bold">
                     <i className="fas fa-award text-warning"></i> DTR Generator System
-                  </p>
+                  </h5>
+                   <div className="card-body">
+            
+                     <p className="card-text text-center">This is my personal project at DMW, designed to help the HR department generate reports from the biometrics device. <br/> <b>Note: </b> <u>I only used MSAccess and Macros</u></p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-md-4 d-flex justify-content-center mb-4">
-              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+            <div className="col-md-6 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "25rem" }}>
+                <img src={Payslip} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
                   <p className="card-text text-center fw-bold">
                     <i className="fas fa-award text-warning"></i> Payslip Generator System
@@ -341,9 +356,9 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="col-md-4 d-flex justify-content-center mb-4">
-              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+            <div className="col-md-6 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "25rem" }}>
+                <img src={Nosa} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
                   <p className="card-text text-center fw-bold">
                     <i className="fas fa-award text-warning"></i> NOSA Generator System
@@ -352,9 +367,9 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="col-md-4 d-flex justify-content-center mb-4">
-              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+             <div className="col-md-6 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "25rem" }}>
+                <img src={Payslip} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
                   <p className="card-text text-center fw-bold">
                     <i className="fas fa-award text-warning"></i> Parking Monitoring System
@@ -363,7 +378,7 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="col-md-4 d-flex justify-content-center mb-4">
+            {/* <div className="col-md-4 d-flex justify-content-center mb-4">
               <div className="card h-100 imgBG" style={{ width: "18rem" }}>
                 <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
@@ -372,13 +387,15 @@ function Homepage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>
       </div> 
 
-    </div>
+    {/* </div>
+  </div> */}
+
   </div>
 </section>
 
