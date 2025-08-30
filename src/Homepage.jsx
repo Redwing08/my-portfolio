@@ -283,23 +283,105 @@ function Homepage() {
     
       </section>
 
-      <section id="project" className="section project">
-             <div className="container-fluid">
-        <div className="row no-gutters">
-            <div className="col-12 col-md-6">
-                <div className="circle-display">
-                  <ModelViewer/>
-                </div>
-            </div>   
-            <div className="col-12 col-md-6">
+     <section id="project" className="section project">
+  <div className="container-fluid ">
+    <div className="row no-gutters ms-5">
+      
+      {/* Left Side - Large Project Card */}
+      <div className="col-12 col-md-6 d-flex justify-content-center mb-4">
+        <div 
+          className="card h-100 imgBG" 
+          style={{ width: "28rem", height: "32rem" }} // ⬅️ Increased width & height
+        >
 
-            </div> 
-
+          <ModelViewer/>
+          {/* <img 
+            src={ProfilePic} 
+            className="card-img-top bgdis" 
+            alt="..." 
+            style={{ height: "60%", objectFit: "cover" }} // ⬅️ Made image take up more space and scale nicely
+          /> */}
+          <div className="card-body">
+            <p className="card-text text-center fw-bold">
+              <i className="fas fa-award text-warning"></i> 
+              Digitalization of Traditional Fishing Gear System
+            </p>
+          </div>
         </div>
       </div>
+      
+      {/* Right Side - Other Projects */}
+      <div className="col-12 col-md-6">
+        <div className="container-fluid">
+          <div className="row justify-content-center imgDisplay">
+            <div className="col-md-12 text-center displayAchievement"> 
+              <h4 className="text-white">Other Projects</h4> 
+            </div>
 
+            {/* Smaller cards */}
+            <div className="col-md-4 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+                <div className="card-body">
+                  <p className="card-text text-center fw-bold">
+                    <i className="fas fa-award text-warning"></i> DTR Generator System
+                  </p>
+                </div>
+              </div>
+            </div>
 
-      </section>
+            <div className="col-md-4 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+                <div className="card-body">
+                  <p className="card-text text-center fw-bold">
+                    <i className="fas fa-award text-warning"></i> Payslip Generator System
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+                <div className="card-body">
+                  <p className="card-text text-center fw-bold">
+                    <i className="fas fa-award text-warning"></i> NOSA Generator System
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+                <div className="card-body">
+                  <p className="card-text text-center fw-bold">
+                    <i className="fas fa-award text-warning"></i> Parking Monitoring System
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
+                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+                <div className="card-body">
+                  <p className="card-text text-center fw-bold">
+                    <i className="fas fa-award text-warning"></i> Digitalization of Traditional Fishing Gear System
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div> 
+
+    </div>
+  </div>
+</section>
+
 
       <section id="about" className="section about">
         <h1>About Me</h1>

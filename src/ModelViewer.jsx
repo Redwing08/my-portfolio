@@ -5,49 +5,74 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const ModelViewer = () => {
   const mountRef = useRef(null);
+  const loadedRef = useRef(false);
 
   useEffect(() => {
     if (!mountRef.current) return;
 
-    // Scene + Camera
+    // Scene
     const scene = new THREE.Scene();
+
+    // Camera
     const camera = new THREE.PerspectiveCamera(
       75,
       mountRef.current.clientWidth / mountRef.current.clientHeight,
       0.1,
       1000
     );
-    camera.position.set(0, 1, 5);
 
-    // Renderer (transparent bg ✅)
+    // Renderer (transparent background ✅)
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0); // transparent instead of black
     renderer.setSize(
       mountRef.current.clientWidth,
       mountRef.current.clientHeight
     );
-    renderer.setClearColor(0x000000, 0); // transparent
     mountRef.current.appendChild(renderer.domElement);
 
-    // Controls (allow move/rotate/zoom ✅)
+    // Controls
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controls.enablePan = true;
     controls.enableZoom = true;
+    controls.autoRotate = false;
 
-    // Light
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(2, 2, 5).normalize();
-    scene.add(light);
+    // Lights (bright)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 4);
+    scene.add(ambientLight);
 
-    // Load model ✅
+    const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5);
+    scene.add(hemiLight);
+
+    // Loader ✅ (you missed this line before)
     const loader = new GLTFLoader();
+
+    // Load model
     loader.load(
-      import.meta.env.BASE_URL + "BALALONG.glb",
+      import.meta.env.BASE_URL + "BreathalizerKeys.glb",
       (gltf) => {
-        gltf.scene.scale.set(2, 2, 2); // make it bigger ✅
-        scene.add(gltf.scene);
-        animate();
+        if (loadedRef.current) return;
+        loadedRef.current = true;
+
+        const model = gltf.scene;
+        scene.add(model);
+
+        // Compute bounding box
+        const box = new THREE.Box3().setFromObject(model);
+        const size = box.getSize(new THREE.Vector3());
+        const maxAxis = Math.max(size.x, size.y, size.z);
+
+        // ✅ Make model bigger (increase multiplier)
+        const scale = 8 / maxAxis; // increase this number if still small
+        model.scale.setScalar(scale);
+
+        // Center model
+        box.setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        model.position.sub(center);
+
+        // Position camera closer so model looks bigger
+        camera.position.set(0, 0, maxAxis * 1.5); // smaller multiplier = zoom closer
+        camera.lookAt(0, 0, 0);
       },
       undefined,
       (error) => console.error("Error loading model:", error)
@@ -59,8 +84,9 @@ const ModelViewer = () => {
       controls.update();
       renderer.render(scene, camera);
     };
+    animate();
 
-    // Resize handler ✅
+    // Handle resize
     const handleResize = () => {
       camera.aspect =
         mountRef.current.clientWidth / mountRef.current.clientHeight;
@@ -82,12 +108,8 @@ const ModelViewer = () => {
     };
   }, []);
 
-  return (
-    <div
-      ref={mountRef}
-      style={{ width: "100%", height: "100vh", background: "transparent" }}
-    />
-  );
+  // Set a fixed height so it’s visible
+  return <div ref={mountRef} style={{ width: "100%", height: "500px" }} />;
 };
 
 export default ModelViewer;
