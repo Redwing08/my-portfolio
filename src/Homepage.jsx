@@ -6,6 +6,15 @@ import Navbar from "./Navbar";
 import Nosa from './assets/NOSA.png'
 import Dtr from './assets/DTR.png'
 import Payslip from './assets/PAYSLIP.png'
+import Aicc from './assets/AICC.png'
+import EthicalHack from './assets/EthicalHacking.png'
+import Medal from './assets/medals.jpg'
+import Capstone from './assets/capstone.png'
+import Cum from './assets/cum.jpg'
+import Hack from './assets/hackathon.jpg'
+import Leader from './assets/leadership.jpg'
+import Outstanding from './assets/outstanding.jpg'
+import Techno from './assets/techno.jpg'
 import ProfilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 //This is for the email sender first  npm install emailjs-com
@@ -200,7 +209,7 @@ function Homepage() {
             </div>
               <div className="col-md-4 d-flex justify-content-center mb-4">
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+                  <img src={Hack} className="card-img-top bgdis" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-award text-warning"></i> Hackathon-Champion</p>
                      <p className="card-text text-center">Likhamon Research Extension Development Innovation</p>
@@ -209,7 +218,7 @@ function Homepage() {
               </div>
                <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Cum} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-graduation-cap text-warning"></i> CUM LAUDE - Batch 2024</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
@@ -237,7 +246,7 @@ function Homepage() {
               </div>
                        <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Leader} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i  className="fas fa-trophy text-warning"></i> Leadership Award</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
@@ -246,7 +255,7 @@ function Homepage() {
               </div>  
               <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Outstanding} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-warning"></i>Outstanding Student Trainee</p>
                      <p className="card-text text-center">Department of Migrant Workers</p>
@@ -255,7 +264,7 @@ function Homepage() {
               </div> 
               <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Techno} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-chalkboard-teacher text-warning"></i>Techno Club President -2022</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
@@ -273,7 +282,7 @@ function Homepage() {
               </div> 
                   <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={EthicalHack} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-laptop-code text-warning"></i>Introduction to Ethical Hacking </p>
                      <p className="card-text text-center">Upskill Up Diliman </p>
@@ -352,6 +361,7 @@ function Homepage() {
                   <p className="card-text text-center fw-bold">
                     <i className="fas fa-award text-warning"></i> Payslip Generator System
                   </p>
+                      <p className="card-text text-center">This is my personal project at DMW, a system that helps generate employee payslips. <br/> <b>Note: </b> <u>I only used MSAccess and Macros</u></p>
                 </div>
               </div>
             </div>
@@ -363,31 +373,71 @@ function Homepage() {
                   <p className="card-text text-center fw-bold">
                     <i className="fas fa-award text-warning"></i> NOSA Generator System
                   </p>
+                 <p className="card-text text-center">
+                  This is my personal project at DMW. The system is used to handle salary adjustments for employees and includes an email function that sends notifications directly to them. <br/> 
+                  <b>Note:</b> <u>Developed using MS Access and Macros</u>
+                </p>
+                                
                 </div>
               </div>
             </div>
 
              <div className="col-md-6 d-flex justify-content-center mb-4">
               <div className="card h-100 imgBG" style={{ width: "25rem" }}>
-                <img src={Payslip} className="card-img-top bgdis" alt="..."/>
+                <img src={Aicc} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
                   <p className="card-text text-center fw-bold">
-                    <i className="fas fa-award text-warning"></i> Parking Monitoring System
+                    <i className="fas fa-award text-warning"></i> Inventory System Project
                   </p>
+                  <p className="card-text text-center">
+                 My Personal Project for inventory Stock and producing reports <br/> 
+                </p>
+               <div className="program">
+                    <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={HtmlLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div> 
+                      <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div>  
+                      <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div>  
+                      <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div>  
+                  </div>         
                 </div>
               </div>
             </div>
 
-            {/* <div className="col-md-4 d-flex justify-content-center mb-4">
-              <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                <img src={ProfilePic} className="card-img-top bgdis" alt="..."/>
+               <div className="col-md-6 d-flex justify-content-center mb-4">
+              <div className="card h-100 imgBG" style={{ width: "25rem" }}>
+                <img src={Capstone} className="card-img-top bgdis" alt="..."/>
                 <div className="card-body">
                   <p className="card-text text-center fw-bold">
-                    <i className="fas fa-award text-warning"></i> Digitalization of Traditional Fishing Gear System
+                    <i className="fas fa-award text-warning"></i> Traditional Fishing Gear Preservation System
                   </p>
+                  <p className="card-text text-center">
+                    This system is my Capstone Project, designed to preserve the traditional fishing gear of our province, Romblon. It documents step-by-step procedures and includes a 3D model for an enhanced viewing experience.
+                  </p>
+
+               <div className="program">
+                    <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={HtmlLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div> 
+                      <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div>  
+                      <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div>  
+                      <div className="card h-10 imgBG d-flex justify-content-center align-items-center" style={{ width: "3rem", height: "3rem" }}>
+                          <img src={CssLogo} className="card-img-top "  style ={{width: "2rem"}}  alt="..."/>
+                      </div>  
+                  </div>         
                 </div>
               </div>
-            </div> */}
+            </div>
 
           </div>
         </div>
