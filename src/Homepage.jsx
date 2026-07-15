@@ -3,6 +3,7 @@ import React  from "react";
 import ModelViewer from './ModelViewer';
 import Navbar from "./Navbar";
 //Image & pdf
+import Tesda from './assets/TESDA.png'
 import Nosa from './assets/NOSA.png'
 import Dtr from './assets/DTR.png'
 import Payslip from './assets/PAYSLIP.png'
@@ -15,6 +16,7 @@ import Hack from './assets/hackathon.jpg'
 import Leader from './assets/leadership.jpg'
 import Outstanding from './assets/outstanding.jpg'
 import Techno from './assets/techno.jpg'
+import Commendation from './assets/Dmw_Ojt.png'
 import ProfilePic from "./assets/steve.png";
 import "./css/Homepage.css"; // import CSS
 //This is for the email sender first  npm install emailjs-com
@@ -81,7 +83,7 @@ function Homepage() {
         <div className="col-12 col-md-6">
           <p className="pgraph">Hello! It's me</p>
           <p className="DisplayName">STEVE CALVIN</p>
-          <h3 className="tagline">An Aspiring Software Engineer</h3>
+          <h3 className="tagline">Software Developer </h3>
 
           <p className="myself">
             IT graduate skilled in software/hardware troubleshooting, programming
@@ -237,7 +239,7 @@ function Homepage() {
                     
                <div className="col-md-4 d-flex justify-content-center mb-4">
                 <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Tesda} className="card-img-top" alt="..."/>
                   <div className="card-body">
                        <p className="card-text text-center fw-bold"><i className="fas fa-medal text-warning"></i> NCIII -Passer Java Programming</p>
                      <p className="card-text text-center">Joysis Techvoc</p>
@@ -273,7 +275,7 @@ function Homepage() {
               </div> 
                   <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Commendation} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold "><i className="fas fa-laptop-code text-warning"></i>Certificate of Commendation</p>
                      <p className="card-text text-center">Department of Migrant Workers</p>
