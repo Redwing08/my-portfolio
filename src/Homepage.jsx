@@ -18,6 +18,7 @@ import Outstanding from './assets/outstanding.jpg'
 import Techno from './assets/techno.jpg'
 import Commendation from './assets/Dmw_Ojt.png'
 import ProfilePic from "./assets/steve.png";
+import Medals  from './assets/medals.jpg'
 import "./css/Homepage.css"; // import CSS
 //This is for the email sender first  npm install emailjs-com
 import emailjs from "emailjs-com";
@@ -229,7 +230,7 @@ function Homepage() {
               </div>
               <div className="col-md-4 d-flex justify-content-center mb-4">
                  <div className="card h-100 imgBG" style={{ width: "18rem" }}>
-                  <img src={ProfilePic} className="card-img-top" alt="..."/>
+                  <img src={Medals} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <p className="card-text text-center fw-bold"><i className="fas fa-graduation-cap text-warning"></i> Highest GWA / Valedictorian - Batch 2024</p>
                      <p className="card-text text-center">Romblon State University -San Fernando Romblon</p>
